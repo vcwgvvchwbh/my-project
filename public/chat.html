@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>چت آنلاین</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ویدیو پس‌زمینه -->
+  <video autoplay muted loop class="background-video">
+    <source src="e5ba43581db7b3e980eed5660d379d2a18936221-720p.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+
+  <div id="chat-container">
+    <ul id="messages"></ul>
+    <div id="input-container">
+      <input id="messageInput" type="text" placeholder="پیام خود را بنویسید...">
+      <button id="sendButton">ارسال</button>
+      <button id="changeNameButton">تغییر نام</button>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="info.html">
+          <button style="padding: 10px 20px; background-color: #0088ff; color: white; border: none; border-radius: 5px;">
+            بازگشت به صفحه اطلاعات
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

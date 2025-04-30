@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مهارت ها</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-video-path.mp4') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      position: relative;
+    }
+
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1s ease;
+    }
+
+    .info {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.5s ease;
+    }
+
+    .info:hover {
+      transform: scale(1.05);
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .contact-section {
+      margin: 15px 0;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+  .btnd ,.btn, .contact-btn, .download-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #007bff;
+     color: white;
+     text-decoration: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+     cursor: pointer;
+  }
+
+.btn:hover,.btnd:hover, .contact-btn:hover, .download-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+    .skills {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    .progress {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      height: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #28a745;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      font-size: 0.9rem;
+      transition: width 1s ease;
+    }
+
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 1000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ویدیو پس‌زمینه -->
+  <video autoplay muted loop class="background-video">
+    <source src="e5ba43581db7b3e980eed5660d379d2a18936221-720p.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+
+  <h1>مهارت ها</h1>
+
+  <div class="info">
+    <p><strong>نام:</strong> مهدی </p>   
+ <p><strong>کلاس:</strong> یازدهم نرم افزار</p>
+
+    <div class="skills">
+      <div class="skill-name">ساخت ربات تلگرام</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    
+      <div class="skill-name">طراحی وب</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 85%;">85%</div>
+      </div>
+    
+      <div class="skill-name">برنامه نویسی پایتون</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 75%;">75%</div>
+      </div>
+    
+      <div class="skill-name">برنامه نویسی سی شارپ</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 60%;">60%</div>
+      </div>
+    
+      <div class="skill-name">آشنایی با ورد</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <a class="btn" href="index.html">بازگشت به صفحه قبلی</a>
+    <a class="download-btn" href="donlide.html">دانلود ها</a>
+    <a class="btn chat-btn" href="chat.html">روم چت</a>
+    <a class="btnd" href="game.html">بازی</a>
+  </div>
+
+  <script>
+    function copyPhone() {
+      const phoneNumber = document.getElementById('phone-number').innerText;
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        showNotification();
+      });
+    }
+
+    function showNotification() {
+      const notification = document.getElementById('notification');
+      notification.style.display = 'block';
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 2000); // پیام بعد از ۲ ثانیه مخفی می‌شود
+    }
+  </script>
+
+</body>
+</html>

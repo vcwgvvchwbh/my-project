@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>طراح سایت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      overflow: hidden;
+      background: url('m.jpg') no-repeat center center/cover;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      max-width: 400px;
+      text-align: center;
+      padding: 30px 20px;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%) scale(0.95);
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+      z-index: 2;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      font-size: 2rem;
+      margin: 20px 0;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .desc {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5);
+    }
+
+    .btn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(40, 167, 69, 0.7);
+    }
+
+    /* لودینگ */
+    #loading {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #28a745;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+      }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- صفحه اصلی -->
+<div class="card">
+  <img src="-2147483648_-210103.jpg" alt="مشخصات">
+  <div class="title">نام : مهدی</div>
+  <div class="desc">برنامه نویس و طراح وب</div>
+  <a href="#" class="btn" onclick="showLoading()">مشاهده اطلاعات</a>
+  <a class="btn" href="https://instagram.com/mahdi_turk_000" target="_blank">مشاهده اینستاگرام</a>
+</div>
+
+<!-- لودینگ -->
+<div id="loading">
+  <div class="loader"></div>
+</div>
+
+<script>
+function showLoading() {
+  document.getElementById('loading').style.display = 'flex';
+  setTimeout(function(){
+    window.location.href = 'info.html';
+  }, 600); // بعد از 0.6 ثانیه برو به صفحه دوم
+}
+</script>
+
+</body>
+</html>
